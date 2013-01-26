@@ -7,16 +7,16 @@ var TMF = {
         debug.innerHTML = 'tag my favorites, v1';
         document.body.appendChild( debug );
         
-        chrome.bookmarks.getTree( function(BookmarkTreeNodes) {
+        chrome.bookmarks.getTree( function(bookmarkTreeNodes) {
             
             var debug = document.createElement('h1');
-            debug.innerHTML = 'found ' + BookmarkTreeNodes[0].children.length.toString() + ' favs.';
+            debug.innerHTML = 'found ' + bookmarkTreeNodes[0].children.length.toString() + ' favs.';
             document.body.appendChild( debug );
             
-            console.log( BookmarkTreeNodes );
+            console.log( bookmarkTreeNodes );
             
             var ul = document.createElement('ul');
-            TMF.showBookmarksRecursively( BookmarkTreeNodes[0].children, ul );
+            TMF.showBookmarksRecursively( bookmarkTreeNodes[0].children, ul );
             document.body.appendChild( ul );
             
         });
