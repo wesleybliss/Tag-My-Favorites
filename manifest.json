@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tag My Favorites",
+  "description": "Intelligently and automatically tags your favorites based on page content word frequency.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "tagmyfavorites.html"
+  },
+  "permissions": [
+    
+  ]
+}
